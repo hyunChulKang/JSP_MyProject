@@ -65,7 +65,7 @@
 <script src="<%=request.getContextPath() %>/resources/bootstrap/dist/js/adminlte.min.js"></script>
 <script>
 	function logout_go(id){
-		alert(id+" 님 그동안 감사했습니다. \r\n로그인 화면으로 이동합니다.");
+		alert(id+" 님 그동안 감사했습니다!. \r\n로그인 화면으로 이동합니다.");
 		location.href="login";
 		request.getSession().invalidate();
 
