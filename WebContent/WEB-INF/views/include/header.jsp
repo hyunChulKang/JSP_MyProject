@@ -18,23 +18,23 @@
 </head>
 <body class="main">
 	<header>
-	<section class="content-header">
+	<section class="content-header" style="float: right;  padding: 0px 15% 0px 0px;">
       <div class="container-fluid">
         <div class="row mb">
             <ol class="breadcrumb float-sm-right" style="line-height: 20px;">
               <li class="breadcrumb-item"><a id="userIdOnText">${loginUser.id} 님 환영합니다. </a><a id="logoutBtn" onmouseup="logout_go('${loginUser.id}')" > 로그아웃</a></li>
               <li class="breadcrumb-item"><a href="#" class="header-item">Home</a></li>
-              <li class="breadcrumb-item"><a href="#" class="header-item">Layout</a></li>
+              <li class="breadcrumb-item"><a href="#" class="header-item">회원관리</a></li>
               <li class="breadcrumb-item"><a href="#" class="header-item">Layout</a></li>
             </ol>
         </div>
       </div><!-- /.container-fluid -->
     </section>
       <div class= "content-headerdown">
-	      <div class="navbar1">
+	      <div class="navbar1 col-sm-3">
 	      	<a href="#" >MyProject</a>
 	      </div>
-      <div class="navbar2">
+      <div class="navbar2 col-sm-9">
       	<ol>
       		<li><a class="navbar_btn" style="color: #f5f8fa;">일정관리</a></li>
       	
@@ -52,11 +52,6 @@
 	<div class="navbar_DetailContentLine">
 		
 	</div>
-	
-	<aside>
-	
-	
-	</aside>
 	<!-- jQuery -->
 <script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -71,7 +66,6 @@
 
 	}
 </script>
-</body>
 <style>
 	header{
 		height: auto;
@@ -81,15 +75,10 @@
 	.btn-block{
 		width: 150px;
 	}
-	.content-header {
-	    padding: 0px 150px 0px 150px;
-	}
-	.row{
-		display: unset;
-	}
 	.content-headerdown{
-		padding: 0px 150px 0px 150px;
+		padding: 0px 15% 0px 15%;
 		height: 39px;
+		clear: both;
 	}
 	.navbar1{
 		float: left;
@@ -141,4 +130,3 @@
 	font-size: 10px;
 	}
 </style>
-</html>

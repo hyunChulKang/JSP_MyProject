@@ -17,39 +17,36 @@ import com.jsp.dto.MemberVO;
 import com.jsp.exception.InvalidPasswordException;
 import com.jsp.exception.NotFoundIDExcepiton;
 import com.jsp.service.MemberServiceImpl;
+import com.jsp.utils.ViewResolver;
 
-//@WebServlet("/login")
+@WebServlet("/commons/login")
 public class LoginServlet extends HttpServlet {
-	MemberServiceImpl serv = MemberServiceImpl.getInstance();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/common/loginForm.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/views/commons/loginForm.jsp").forward(request, response);
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "/WEB-INF/views/common/loginForm.jsp";
+		String url = "redirect:/member/list";
 		String id= request.getParameter("id");
 		String pass= request.getParameter("pass");
 		
-		MemberVO vo = new MemberVO();
-			vo.setId(id);
-			vo.setPwd(pass);
-			
+		HttpSession session= request.getSession();
+		
 			/*값 체크에 따른 페이지 이동*/
 			try {
-				serv.login(id, pass);
-			} catch (SQLException e) {
+				MemberServiceImpl.getInstance().login(id, pass);
+				MemberVO loginUser =MemberServiceImpl.getInstance().getMember(id);
+				session.setAttribute("loginUser", loginUser);
+				session.setMaxInactiveInterval(60*20);
+				
+				} catch (SQLException e) {
 				e.printStackTrace();
-			} catch (NotFoundIDExcepiton e) {
-				e.printStackTrace();
-				response.sendRedirect("/login");
-			} catch (InvalidPasswordException e) {
-				response.sendRedirect("/login");
-				e.printStackTrace();
+				url="error/500_error";
+				request.setAttribute("exception", e);
+			} catch (NotFoundIDExcepiton | InvalidPasswordException e) {
+				url="commons/loginForm";
+				request.setAttribute("msg",e.getMessage());
 			}
-			HttpSession session = request.getSession();
-			session.setAttribute("loginUser", vo);
-			request.setAttribute("id", id);
-			url = "/WEB-INF/views/common/login_success.jsp";
-			request.getRequestDispatcher(url).forward(request, response);
+			ViewResolver.view(request, response, url);
 	}
 
 }

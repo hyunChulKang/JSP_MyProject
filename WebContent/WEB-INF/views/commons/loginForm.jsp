@@ -8,14 +8,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>로그인 화면</title>
-  <link rel="stylesheet" href="/resources/bootstrap/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/bootstrap/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/resources/bootstrap/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/bootstrap/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <style>
   	.btn-block{
   		width:98px;
+  	}
+  	body.login-page{
+  	background-image: url('<%=request.getContextPath()%>/resources/images/intro3.jpg');
+  	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat; 
+  	}
+  	.login-logo a{
+  		color: black;
   	}
   </style>
 </head>
@@ -24,14 +33,14 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href=""><b>로그인</b>Test</a>
+    <a href=""><b style="color: ">로그인</b>Test</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
       <p class="login-box-msg">홈페이지를 이용하시려면 <br/>로그인이 필요합니다.</p>
 
-      <form name="frm" action="/login" method="post">
+      <form name="frm" action="<%=request.getContextPath() %>/commons/login" method="post">
         <div class="input-group mb-3">
           <input type="text" name="id" class="form-control" placeholder="Id">
           <div class="input-group-append">
@@ -67,11 +76,11 @@
       </div>
       <!-- /.social-auth-links -->
 	<!-- jQuery -->
-<script src="/resources/bootstrap/plugins/jquery/jquery.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="/resources/bootstrap/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="/resources/bootstrap/dist/js/adminlte.min.js"></script>
+<script src="<%=request.getContextPath() %>/resources/bootstrap/dist/js/adminlte.min.js"></script>
 <script>
 function login_go(){
 		$('form[name="frm"]').submit();
