@@ -25,7 +25,10 @@ public class MemberDAOImpl implements MemberDAO{
 
 	@Override
 	public List<MemberVO> selectMemberList() throws SQLException {
-		return null;
+		SqlSession session =sqlFactoryBuilder.openSession();
+		List<MemberVO> memberList= session.selectList("Member-Mapper.selectMemberList");
+		session.close();
+		return memberList;
 	}
 	@Override
 	public int selectMemberListCount() throws SQLException {

@@ -4,7 +4,7 @@
 
 <%@ include file="/WEB-INF/views/include/open_header.jsp" %>
 	<!-- Content Wrapper. Contains page content -->
- <div class="content-        wrapper">
+ <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
 	  <section class="content-header">
 	  	<div class="container-fluid">
@@ -28,12 +28,12 @@
 		</div>
 	</section>
 	<!-- Main content -->
-	<section class="content register-page" style="height: 586.391px; ">
-		<div class="register-box">
+	<section class="content register-page" style="height: auto; ">
+		<div class="register-box regibox">
 			<!-- form start -->
 			<div class="card">
 				<div class="register-card-body">
-					<form role="form" class="form-horizontal" action="regist.do" method="post">						
+					<form role="form" class="form-horizontal" action="regist" method="post">						
 						<input type="hidden" name="picture" />
 						<div class="input-group mb-3">
 							<div class="mailbox-attachments clearfix" style="text-align: center;">
@@ -92,7 +92,7 @@
 							<label for="phone" class="col-sm-3 control-label">전화번호</label>
 							<div class="col-sm-9">	
 								<div class="input-group-sm">
-									<select style="width:75px;" name="phone" id="phone" class="form-control float-left">
+									<select style="width:100px;" name="phone" id="phone" class="form-control float-left">
 										<option value="">-선택-</option>
 										<option value="010">010</option>
 										<option value="011">011</option>
@@ -100,9 +100,9 @@
 										<option value="018">018</option>
 									</select>							
 									<label class="float-left" style="padding: 0; text-align: center;">&nbsp;-&nbsp;</label>										
-									<input style="width:68px;" name="phone" type="text" class="form-control float-left" />
+									<input style="width:100px;" name="phone" type="text" class="form-control float-left" />
 									<label class="float-left" style="padding: 0; text-align: center;">&nbsp;-</label>
-									<input style="width:68px;" name="phone" type="text" class="form-control float-right" />						
+									<input style="width:100px;" name="phone" type="text" class="form-control float-left" />						
 								</div>
 							</div>
 						</div>
@@ -127,18 +127,22 @@
 	</section>		<!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
+<style>
+	.regibox{
+		width:500px; 
+	}
+</style>
 
-
-<form role="imageForm" action="upload/picture.do" method="post" enctype="multipart/form-data">
+<form role="imageForm" action="upload/picture" method="post" enctype="multipart/form-data">
 	<input id="inputFile" name="pictureFile" type="file" class="form-control" style="display:none;">
 	<input id="oldFile" type="hidden" name="oldPicture" value="" />
 	<input type="hidden" name="checkUpload" value="0" />	
 </form>
 
 
-
 <%@ include file="/WEB-INF/views/include/open_footer.jsp" %>
 
+<%@ include file="picturn_js.jsp" %>
 
 
 

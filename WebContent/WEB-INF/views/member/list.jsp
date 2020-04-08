@@ -3,7 +3,7 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
-<div class="content-wrapper" style="margin-left: 15%;">
+<div class="content-wrapper" style="margin: 0px,15%, 0px,15%;">
 		<!-- Content Header (Page header) -->
 		  <section class="content-header">
 		  	<div class="container-fluid">
@@ -67,9 +67,9 @@
 	             			<th>전화번호</th>
 	             		</tr>
 
-		             	<c:if test="${!empty memberList }">
+		             	<c:if test="${!empty memberlist }">
 		             	
-		             		<c:forEach var="member" items="${memberList }">
+		             		<c:forEach var="member" items="${memberlist }">
 		             			<tr>
 		             				<td>${member.id}</td>
 		             				<td>${member.name}</td>
@@ -81,10 +81,10 @@
 
 		             	</c:if>
 
-		             	<c:if test="${empty memberList }">
-		             			<tr>
-		             				<td colspan="5">해당 항목이 없습니다.</td>
-		             			</tr>
+		             	<c:if test="${empty memberlist }">
+	             			<tr>
+	             				<td colspan="5">해당 항목이 없습니다.</td>
+	             			</tr>
 		             	</c:if>
 
 				 	</table>	
@@ -105,7 +105,7 @@
 	function OpenWindow(UrlStr, WinTitle, WinWidth, WinHeight){
 		winleft =(screen.width - WinWidth) /2;
 		wintop = (screen.height - WinHeight) /2;
-		var win = window.open(UrlStr, WinTitle, "scrollbars=yes, widtj=" + WinWidth +", " +"height="+ WinHeight +", top=" +wintop
+		var win = window.open(UrlStr, WinTitle, "scrollbars=yes, width=" + WinWidth +", " +"height="+ WinHeight +", top=" +wintop
 								+", left=" +winleft +", resizable=yes, status=yes");
 		win.focus();
 	}

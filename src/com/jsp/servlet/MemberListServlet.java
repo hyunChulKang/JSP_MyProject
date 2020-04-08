@@ -30,7 +30,6 @@ public class MemberListServlet extends HttpServlet {
 		
 		try {
 			List<MemberVO> memberlist = MemberServiceImpl.getInstance().getMemberList();
-		
 			request.setAttribute("memberlist", memberlist);
 		} catch (SQLException e) {
 			e.printStackTrace();
