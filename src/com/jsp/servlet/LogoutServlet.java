@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.jsp.utils.ViewResolver;
 
@@ -13,6 +14,9 @@ import com.jsp.utils.ViewResolver;
 public class LogoutServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url ="redirect:/commons/login";
+		
+		HttpSession session = request.getSession();
+		session.invalidate();
 		
 		ViewResolver.view(request, response, url);
 	}
