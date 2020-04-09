@@ -31,4 +31,32 @@
 			reader.readAsDataURL(this.files[0]);
 		}
 	});
+	
+	function upload_go(){
+		//form 태그 양식을 객체화
+		var form = new FormData($('form[role="imageForm"]')[0]);
+		
+		if($('input[name="pictureFile"]').val()==""){
+			alert("사진을 선택하세요");
+			$('input[name="pictureFile"]').click();
+			return;
+		};
+		$.ajax({
+			url:"<%=request.getContextPath()%>/member/picture",
+			data:form,
+			type:'post',
+			processData:false,
+			contentType:false,
+			success:function(data){
+				$('input#oldFile').val(data);
+				$('form[role="form"]> input[name="picture"]').val(data);
+				$('input[name="checkUpload"]').val(1);
+				alert("사진을 업로드 했습니다.");
+			},
+				error:function(xhr,exception){
+					alert("파일업로드를 실패 했습니다.");
+			}
+		});
+	}
+	
 </script>

@@ -10,15 +10,19 @@ public class ViewResolver {
 
 	public static void view(HttpServletRequest request, HttpServletResponse response, String url)throws ServletException, IOException {
 	
-		if(url == null) {return;}
+		if(url==null) {return;}
 		
+		//실제url path : /WEB-INF/views/member/list.jsp
+		//action 리턴url: member/list
+		
+		//상태가 있으면 0 없으면 -1
 		if(url.indexOf("redirect:") > -1) {
-			url = request.getContextPath() +url.replace("redirect:", "");
+			url =request.getContextPath()+ url.replace("redirect:", "");
 			response.sendRedirect(url);
 		}else {
-			String prefix = "/WEB-INF/views/";
-			String subfix = ".jsp";
-			url = prefix + url + subfix;
+			String prefix="/WEB-INF/views/";
+			String subfix=".jsp";
+			url = prefix+url+subfix;
 			request.getRequestDispatcher(url).forward(request, response);
 		}
 	}
