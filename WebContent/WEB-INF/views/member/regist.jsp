@@ -10,7 +10,7 @@
 	  	<div class="container-fluid">
 	  		<div class="row md-2">
 	  			<div class="col-sm-6">
-	  				<h1>회원등록</h1>
+	  				<h4>회원등록</h4>
 	  			</div>
 	  			<div class="col-sm-6">
 	  				<ol class="breadcrumb float-sm-right">
@@ -63,7 +63,7 @@
 							</div>								
 						</div>
 						<div class="form-group row">
-							<label for="ㅜㅁ" class="col-sm-3" style="font-size:0.9em;">
+							<label for="pwd" class="col-sm-3" style="font-size:0.9em;">
 								<span style="color:red;font-weight:bold;">*</span>패스워드</label>
 							<div class="col-sm-9 input-group-sm">								
 								<input class="form-control" name="pwd" type="password" class="form-control" id="pwd"
@@ -74,7 +74,7 @@
 							<label for="name" class="col-sm-3" style="font-size:0.9em;">
 								<span style="color:red;font-weight:bold;">*</span>이름</label>
 							<div class="col-sm-9 input-group-sm">								
-								<input class="form-control" name="name" type="password" class="form-control" id="name"
+								<input class="form-control" name="name" type="text" class="form-control" id="name"
 										placeholder="이름을 입력해주세요" />
 							</div>
 						</div>	

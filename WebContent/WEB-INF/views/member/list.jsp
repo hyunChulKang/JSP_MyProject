@@ -3,13 +3,14 @@
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="/WEB-INF/views/include/header.jsp" %>
-<div class="content-wrapper" style="margin: 0px,15%, 0px,15%;">
+
+<div class="content_wrapper" >
 		<!-- Content Header (Page header) -->
 		  <section class="content-header">
 		  	<div class="container-fluid">
 		  		<div class="row md-2">
 		  			<div class="col-sm-6">
-		  				<h1>회원리스트</h1>
+		  				<h4>회원리스트</h4>
 		  			</div>
 		  			<div class="col-sm-6">
 		  				<ol class="breadcrumb float-sm-right">
@@ -19,7 +20,7 @@
 						        </a>
 					        </li>
 					        <li class="breadcrumb-item active">
-					        	리스트
+					        	회원리스트
 					        </li>		        
     	  				</ol>
   					</div>
@@ -32,7 +33,7 @@
     	  	<div class="card-header with-border">
     	  		<c:if test="${loginUser.authority eq 'ROLE_ADMIN' }" >
     	  			<button type="button" class="btn btn-primary" 
-    	  			onclick="OpenWindow('regist ','회원등록',800,600);" >회원등록</button>
+    	  			onclick="OpenWindow('regist ','회원등록',1000,800);" >회원등록</button>
     	  		</c:if>
     	  		<div id="keyword" class="card-tools" style="width:350px;">
 				  <div class="input-group row">		

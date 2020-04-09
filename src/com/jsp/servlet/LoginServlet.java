@@ -32,7 +32,6 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String url="/WEB-INF/views/commons/loginForm.jsp";
-
 		request.getRequestDispatcher(url).forward(request, response);
 	}
 
@@ -55,7 +54,7 @@ public class LoginServlet extends HttpServlet {
 			request.setAttribute("exception", e);
 		} catch (NotFoundIDExcepiton | InvalidPasswordException e) {
 			//e.printStackTrace();
-			url="commons/loginForm";
+			url="/commons/loginForm";
 			request.setAttribute("msg", e.getMessage());
 		}
 		

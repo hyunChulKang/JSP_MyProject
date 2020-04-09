@@ -23,6 +23,7 @@ public class MemberListServlet extends HttpServlet {
        
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String url="member/list";
 		
 		HttpSession session = request.getSession();
@@ -37,13 +38,13 @@ public class MemberListServlet extends HttpServlet {
 		
 		try {
 			List<MemberVO> memberlist= MemberServiceImpl.getInstance().getMemberList();
-			
 			request.setAttribute("memberlist", memberlist);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			url="error/500_error";
 			request.setAttribute("exception", e);
 		}
+		response.setCharacterEncoding("UTF-8");
 		ViewResolver.view(request, response, url);
 		
 	}

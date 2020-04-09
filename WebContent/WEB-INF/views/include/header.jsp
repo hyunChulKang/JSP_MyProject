@@ -129,4 +129,13 @@
 	color: #f3a6a6;
 	font-size: 10px;
 	}
+	.content_wrapper{
+	max-inline-size: max-content;
+	margin-left: 22%;
+	}
+	@media(min-width: 768){
+	transition: margin-left .3s ease-in-out;
+    margin-left: 15%;
+}
+	}
 </style>
