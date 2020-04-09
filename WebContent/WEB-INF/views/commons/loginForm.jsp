@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" name="pass" class="form-control" placeholder="Password">
+          <input type="password" name="pwd" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -66,7 +66,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="button" onclick="login_go()" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
@@ -82,9 +82,11 @@
 <!-- AdminLTE App -->
 <script src="<%=request.getContextPath() %>/resources/bootstrap/dist/js/adminlte.min.js"></script>
 <script>
-function login_go(){
-		$('form[name="frm"]').submit();
+	var message="${msg}";
+	if(message!=""){
+		alert(message);
 	}
 </script>
+	<% session.removeAttribute("msg"); %>
 </body>
 </html>

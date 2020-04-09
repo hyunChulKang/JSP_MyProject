@@ -16,7 +16,7 @@ public class MemberServiceImpl implements MemberService{
 		return instance;
 	}
 	
-	private MemberDAO memberDAO = MemberDAOImpl.getInstance();
+	private MemberDAO memberDAO = MemberDAOImpl.getMemberDaoImpl();
 	public void setMemberDAO(MemberDAO memberDAO) {
 		this.memberDAO=memberDAO;
 	}
@@ -24,6 +24,8 @@ public class MemberServiceImpl implements MemberService{
 	public void login(String id, String pwd) throws SQLException, NotFoundIDExcepiton, InvalidPasswordException {
 		MemberVO vo = memberDAO.selectMemberById(id);
 		if(vo == null) throw new NotFoundIDExcepiton();
+		System.out.println(vo.toString());
+		System.out.println(pwd+"????");
 		if(!pwd.equals(vo.getPwd())) throw new InvalidPasswordException();
 	}
 	@Override
