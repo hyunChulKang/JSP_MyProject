@@ -57,8 +57,10 @@
 								<input name="id" 
 									onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, &#39;&#39;);"
 								type="text" class="form-control" id="id" placeholder="13글자 영문자,숫자 조합">
+								<input name="checkID" type="hidden" />
 								<span class="input-group-append-sm">	
-									<button type="button" onclick="idCheck_go();"  class="btn btn-info btn-sm btn-append">중복확인</button>
+									<button type="button" id="idCheck"  class="btn btn-info btn-sm btn-append">중복확인</button>
+									<span class="check_font" id="id_check"></span>
 								</span>								
 							</div>								
 						</div>
@@ -117,7 +119,7 @@
 						<div class="card-footer">
 							<div class="row">								
 								<div class="col-sm-6">
-									<button type="button" id="registBtn" class="btn btn-info">가입하기</button>
+									<button type="button" onclick="SubmitMemberRegist('form')" class="btn btn-info">가입하기</button>
 							 	</div>
 							 	
 							 	<div class="col-sm-6">
@@ -149,6 +151,5 @@
 
 <%@ include file="/WEB-INF/views/include/open_footer.jsp" %>
 
-<%@ include file="picturn_js.jsp" %>
-<%@ include file="regist_js.jsp" %>
-
+<%@ include file="picture_js.jsp" %>
+<%@ include file="idOverlepCheck_js.jsp" %>

@@ -68,24 +68,21 @@
 	             			<th>전화번호</th>
 	             		</tr>
 
-		             	<c:if test="${!empty memberlist }">
-		             	
+		            	<c:if test="${!empty memberlist }">
 		             		<c:forEach var="member" items="${memberlist }">
 		             			<tr>
-		             				<td>${member.id}</td>
+		             				<td><a href="javascript:OpenWindow('detail?id=${member.id}','회원상세보기','1000','600');">${member.id}</a></td>
 		             				<td>${member.name}</td>
 		             				<td>${member.pwd}</td>
 		             				<td>${member.email}</td>
 		             				<td>${member.phone}</td>
 		             			</tr>
 		             		</c:forEach>
-
 		             	</c:if>
-
 		             	<c:if test="${empty memberlist }">
-	             			<tr>
-	             				<td colspan="5">해당 항목이 없습니다.</td>
-	             			</tr>
+		             			<tr>
+		             				<td colspan="5">해당 항목이 없습니다.</td>
+		             			</tr>
 		             	</c:if>
 				 	</table>	
             	</div>

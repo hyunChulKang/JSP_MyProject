@@ -130,8 +130,9 @@
 	font-size: 10px;
 	}
 	.content_wrapper{
-	max-inline-size: max-content;
-	margin-left: 22%;
+    margin-left: 22%;
+    margin-right: 22%;
+    width: max-content;
 	}
 	@media(min-width: 768){
 	transition: margin-left .3s ease-in-out;
