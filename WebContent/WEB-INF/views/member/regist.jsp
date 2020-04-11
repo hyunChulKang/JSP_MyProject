@@ -53,30 +53,33 @@
 						  <div class="form-group row">
 							 <label for="id" class="col-sm-3" style="font-size:0.9em;" >
 							 	<span style="color:red;font-weight:bold;">*</span>아이디</label>	
-							<div class="col-sm-9 input-group input-group-sm">
+							<div class="col-sm-9 input-group-sm">
 								<input name="id" 
 									onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, &#39;&#39;);"
-								type="text" class="form-control" id="id" placeholder="13글자 영문자,숫자 조합">
-								<input name="checkID" type="hidden" />
+								type="text" class="form-control" id="id" placeholder="13글자 영문자,숫자 조합" oninput="idCheck();"  style="display: inline-block;width: auto;">
 								<span class="input-group-append-sm">	
-									<button type="button" id="idCheck"  class="btn btn-info btn-sm btn-append">중복확인</button>
 									<span class="check_font" id="id_check"></span>
 								</span>								
+								<input name="checkID" type="hidden" />
 							</div>								
 						</div>
 						<div class="form-group row">
 							<label for="pwd" class="col-sm-3" style="font-size:0.9em;">
 								<span style="color:red;font-weight:bold;">*</span>패스워드</label>
 							<div class="col-sm-9 input-group-sm">								
-								<input class="form-control" name="pwd" type="password" class="form-control" id="pwd"
-										placeholder="20글자 영문자,숫자,특수문자 조합" />
+								<input class="form-control" name="pwd" onblur="pwdCheck();" type="password" class="form-control" id="pwd"style="display: inline-block;width: auto; placeholder="20글자 영문자,숫자,특수문자 조합" />
+								<input name="checkPWD" type="hidden" /> 
+								<span class="input-group-append-sm">
+									
+									<span class="check_font" id="pwd_check"></span>
+								</span> 
 							</div>
 						</div>
 						<div class="form-group row">
 							<label for="name" class="col-sm-3" style="font-size:0.9em;">
 								<span style="color:red;font-weight:bold;">*</span>이름</label>
 							<div class="col-sm-9 input-group-sm">								
-								<input class="form-control" name="name" type="text" class="form-control" id="name"
+								<input class="form-control" name="name" type="text" id="name"
 										placeholder="이름을 입력해주세요" />
 							</div>
 						</div>	
@@ -103,15 +106,15 @@
 								<div class="input-group-sm">
 									<select style="width:100px;" name="phone" id="phone" class="form-control float-left">
 										<option value="">-선택-</option>
-										<option value="010">010</option>
+										<option value="010" selected>010</option>
 										<option value="011">011</option>
 										<option value="017">017</option>
 										<option value="018">018</option>
 									</select>							
 									<label class="float-left" style="padding: 0; text-align: center;">&nbsp;-&nbsp;</label>										
-									<input style="width:100px;" name="phone" type="text" class="form-control float-left" />
+									<input style="width:100px;" name="phone" type="text" class="form-control float-left" onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎ|가-힣|a-z|A-Z|]/g, &#39;&#39;);"/>
 									<label class="float-left" style="padding: 0; text-align: center;">&nbsp;-</label>
-									<input style="width:100px;" name="phone" type="text" class="form-control float-left" />						
+									<input style="width:100px;" name="phone" type="text" class="form-control float-left" onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎ|가-힣|a-z|A-Z|]/g, &#39;&#39;);"/>						
 								</div>
 							</div>
 						</div>

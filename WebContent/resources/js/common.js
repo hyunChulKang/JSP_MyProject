@@ -29,6 +29,18 @@
 			$('input[name="id"]').focus();
 			return;
 		}
+		
+		if(!$('input[name="checkPWD"]').val()){
+			alert("패스워드를 입력하세요!");
+			$('input[name="checkPWD"').focus();
+			return;
+		}
+		
+		if($('input[name="checkPWD"]').val() != $('input[name="checkPWD"]').vale()){
+			alert("부적합한 패스워드입니다.!");
+			$('input[name="checkPWD"').focus();
+			return;
+		} 
 		var form =$('form[role="form"]');
 		form.submit();
 	}

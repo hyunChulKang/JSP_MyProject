@@ -76,7 +76,7 @@
 		width: 150px;
 	}
 	.content-headerdown{
-		padding: 0px 15% 0px 15%;
+		padding: 0px 10% 0px 10%;
 		height: 39px;
 		clear: both;
 	}
@@ -130,8 +130,8 @@
 	font-size: 10px;
 	}
 	.content_wrapper{
-    margin-left: 22%;
-    margin-right: 22%;
+    margin-left: 10%;
+    margin-right: 10%;
     width: max-content;
 	}
 	@media(min-width: 768){

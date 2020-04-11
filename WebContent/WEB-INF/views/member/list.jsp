@@ -33,7 +33,7 @@
     	  	<div class="card-header with-border">
     	  		<c:if test="${loginUser.authority eq 'ROLE_ADMIN' }" >
     	  			<button type="button" class="btn btn-primary" 
-    	  			onclick="OpenWindow('regist ','회원등록',1000,800);" >회원등록</button>
+    	  			onclick="OpenWindow('regist ','회원등록',600,500);" >회원등록</button>
     	  		</c:if>
     	  		<div id="keyword" class="card-tools" style="width:350px;">
 				  <div class="input-group row">		
