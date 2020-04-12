@@ -100,6 +100,10 @@ nav[class="clearfix"] a#pull{
 	div[class="center"]{
 		display: none;
 	}
+	
+	div[textbox="seachtext"]{
+		width:233px;
+	}
 }
 
 

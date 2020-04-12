@@ -1,11 +1,19 @@
 
- lable[class=col-sm-3]{
-	font-size: 0.9em;
-	text-align: center;
-	width: 21%;
-	display: inline-block;
- }
-}
+	 .labelui{
+		font-size: 0.9em;
+		text-align: center;
+		width: 23%;
+		display: inline-block;
+	 }
+	 .widthsize{
+	 	width:76%;
+	 	padding-left: 0;	
+	 }
+	 .inputtextwidth{
+	 	display: inline-block;
+    	width: 71%;
+    	padding-left: 0;
+	 }
 
 
 

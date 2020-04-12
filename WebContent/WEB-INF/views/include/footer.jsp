@@ -4,13 +4,13 @@
 
 
   <!-- Main Footer -->
-  <footer class="main-footer">
+  <footer class="main-footer" style="clear: both; margin-left: 10%; margin-right: 14%;">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
       Anything you want
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>MyPage &copy; 2020 <a href="https://localhost">MyProject</a>.</strong> All rights reserved.
   </footer>
 </div>
 <!-- ./wrapper -->

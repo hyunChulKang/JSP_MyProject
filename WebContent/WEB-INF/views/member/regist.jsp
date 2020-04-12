@@ -51,7 +51,7 @@
 							<br />
 						  </div>	
 						  <div class="form-group row">
-							 <label for="id" class="col-sm-3" style="font-size: 0.9em;text-align: center;width: 21%;display: inline-block;" >
+							 <label for="id" class="col-sm-3 labelui" style="font-size: 0.9em;text-align: center;width: 21%;display: inline-block;" >
 							 	<span style="color:red;font-weight:bold;">*</span>아이디</label>	
 							<div class="col-sm-9 input-group-sm" style="width: 79%;">
 								<input name="id" 
@@ -64,10 +64,10 @@
 							</div>								
 						</div>
 						<div class="form-group row">
-							<label for="pwd" class="col-sm-3" style="font-size:0.9em; text-align: center;">
+							<label for="pwd" class="col-sm-3 labelui" >
 								<span style="color:red;font-weight:bold;">*</span>패스워드</label>
-							<div class="col-sm-9 input-group-sm">								
-								<input class="form-control" name="pwd" onblur="pwdCheck();" type="password" class="form-control" id="pwd"style="display: inline-block;width: auto; placeholder="20글자 영문자,숫자,특수문자 조합" />
+							<div class="col-sm-9 input-group-sm widthsize">								
+								<input class="form-control inputtextwidth" name="pwd" onblur="pwdCheck();" type="password" class="form-control" id="pwd" placeholder="20글자 영문자,숫자,특수문자 조합" />
 								<input name="checkPWD" type="hidden" /> 
 								<span class="input-group-append-sm">
 									
@@ -76,20 +76,20 @@
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="name" class="col-sm-3" style="font-size:0.9em; text-align: center;">
+							<label for="name" class="col-sm-3 labelui" >
 								<span style="color:red;font-weight:bold;">*</span>이름</label>
-							<div class="col-sm-9 input-group-sm">								
-								<input class="form-control" name="name" type="text" id="name"
-										placeholder="이름을 입력해주세요" style="display: inline-block;width: auto;" />
+							<div class="col-sm-9 input-group-sm widthsize">								
+								<input class="form-control inputtextwidth" name="name" type="text" id="name"
+										placeholder="이름을 입력해주세요" />
 								<span class="input-group-append-sm">
 									<span class="check_font"></span>
 								</span>
 							</div>
 						</div>	
 						<div class="form-group row">
-							<label for="authority" class="col-sm-3 control-label text-center" >권 한</label>
-							<div class="col-sm-9" style="max-width: fit-content;">
-								<select name="authority" class="form-control">
+							<label for="authority" class="col-sm-3 control-label text-center labelui" >권 한</label>
+							<div class="col-sm-9 inputtextwidth widthsize" >
+								<select name="authority" class="form-control inputtextwidth">
 									<option value="ROLE_USER">사용자</option>
 									<option value="ROLE_MANAGER">운영자</option>
 									<option value="ROLE_ADMIN">관리자</option>
@@ -97,15 +97,15 @@
 							</div>
 						</div>					
 						<div class="form-group row">
-							<label for="email" class="col-sm-3" style="font-size:0.9em; text-align: center;">이메일</label>
-							<div class="col-sm-9 input-group-sm">
-								<input name="email" type="email" class="form-control" id="email"
+							<label for="email" class="col-sm-3 labelui" >이메일</label>
+							<div class="col-sm-9 input-group-sm widthsize">
+								<input name="email" type="email" class="form-control inputtextwidth" id="email"
 										placeholder="example@naver.com">
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="phone" class="col-sm-3 control-label"  style="text-align: center;">전화번호</label>
-							<div class="col-sm-9" style="max-width: fit-content;">	
+							<label for="phone" class="col-sm-3 control-label labelui"  style="text-align: center;padding-left: 0;">전화번호</label>
+							<div class="col-sm-9 widthsize" >	
 								<div class="input-group-sm">
 									<select style="width:70px;" name="phone" id="phone" class="form-control float-left" >
 										<option value="">-선택-</option>
@@ -123,7 +123,7 @@
 						</div>
 						
 						<div class="card-footer">
-							<div class="row">								
+							<div class="row" style="flex-wrap: inherit;">								
 								<div class="col-sm-6">
 									<button type="button" onclick="SubmitMemberRegist('form')" class="btn btn-info">가입하기</button>
 							 	</div>

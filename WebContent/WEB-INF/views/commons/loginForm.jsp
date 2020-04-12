@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 <title>로그인 화면</title>
+  <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/bootstrap/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/bootstrap/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
@@ -20,7 +21,7 @@
   	background-image: url('<%=request.getContextPath()%>/resources/images/intro3.jpg');
   	background-position:center;
 	background-size:cover;
-	background-repeat:no-repeat; 
+	background-repeat:no-repeat;
   	}
   	.login-logo a{
   		color: black;
@@ -44,7 +45,7 @@
           <input type="text" autofocus name="id" class="form-control" placeholder="Id" value="mimi" }>
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-key"></span>
+              <i class="fa fa-key"></i>
             </div>
           </div>
         </div>
@@ -52,7 +53,7 @@
           <input type="password" name="pwd" class="form-control" placeholder="Password" value="mimi">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-lock"></span>
+              <i class="fa fa-lock"></i>
             </div>
           </div>
         </div>

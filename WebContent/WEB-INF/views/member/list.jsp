@@ -31,11 +31,14 @@
     	<section class="content">
     	  <div class="card">    
     	  	<div class="card-header with-border">
+    	  		<div class="col-sm-4 float-sm-left">
     	  		<c:if test="${loginUser.authority eq 'ROLE_ADMIN' }" >
     	  			<button type="button" class="btn btn-primary" 
-    	  			onclick="OpenWindow('regist ','회원등록',600,500);" >회원등록</button>
+    	  			onclick="OpenWindow('regist ','회원등록',448,739);" >회원등록</button>
     	  		</c:if>
-    	  		<div id="keyword" class="card-tools" style="width:350px;">
+    	  		</div>
+    	  		<div class="col-sm-8 float-sm-left">
+    	  		<div id="keyword" textbox="seachtext" class="card-tools" >
 				  <div class="input-group row">		
 				  <!-- search bar -->	  										
 					<select class="form-control col-md-4" name="searchType" id="searchType">
@@ -54,7 +57,8 @@
 					</span>
 					<!-- end : search bar -->
 				  </div>
-				 </div>    	  		
+				 </div>
+				 </div>  	  		
     	  	</div>	  
     		<div class="card-body" style="text-align:center;">
     		  <div class="row">

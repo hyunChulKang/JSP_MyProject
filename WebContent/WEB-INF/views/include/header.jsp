@@ -10,6 +10,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 <title></title>
+	<!-- jQuery -->
+	<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/jquery/jquery.min.js"></script>
+	<!-- Bootstrap 4 -->
+	<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- AdminLTE App -->
+	<script src="<%=request.getContextPath() %>/resources/bootstrap/dist/js/adminlte.min.js"></script>
+	
   <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/bootstrap/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/bootstrap/dist/css/adminlte.min.css">
@@ -306,19 +313,10 @@
           </li>
          </ul>
       </nav>
-      
       <!-- /.sidebar-menu -->
 	</div>
 </div>
-	<div class="navbar_DetailContentLine">
-		
-	</div>
-	<!-- jQuery -->
-<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="<%=request.getContextPath() %>/resources/bootstrap/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="<%=request.getContextPath() %>/resources/bootstrap/dist/js/adminlte.min.js"></script>
+
 <script>
 	function logout_go(id){
 		alert(id+" 님 그동안 감사했습니다!. \r\n로그인 화면으로 이동합니다.");
@@ -329,9 +327,9 @@
 </script>
 <style>
 	header{
-		height: auto;
-		border-bottom: 1px solid;
-		background: #2981af;
+		float: left;
+		width: 100%;
+		background: #455868;
 	}
 	.btn-block{
 		width: 150px;
@@ -395,6 +393,8 @@
 	.content_wrapper{
     margin-left: 10%;
     margin-right: 15%;
+    float: left;
+    width: 76%;
 	}
 	@media(min-width: 768){
 	transition: margin-left .3s ease-in-out;
