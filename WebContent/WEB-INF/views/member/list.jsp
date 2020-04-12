@@ -58,8 +58,9 @@
     	  	</div>	  
     		<div class="card-body" style="text-align:center;">
     		  <div class="row">
-	             <div class="col-sm-12">	
-		    		<table class="table table-bordered"> 
+	             <div class="col-sm-12">
+	             <div class="table-responsive">	
+		    		<table class="table table-small-font table-bordered table-striped"> 
 	             		<tr>	
 	             			<th>아이디</th>
 	             			<th>이  름</th>
@@ -84,7 +85,8 @@
 		             				<td colspan="5">해당 항목이 없습니다.</td>
 		             			</tr>
 		             	</c:if>
-				 	</table>	
+				 	</table>
+				 	</div>	
             	</div>
            	</div>            
        	  </div>   

@@ -51,12 +51,12 @@
 							<br />
 						  </div>	
 						  <div class="form-group row">
-							 <label for="id" class="col-sm-3" style="font-size:0.9em;" >
+							 <label for="id" class="col-sm-3" style="font-size: 0.9em;text-align: center;width: 21%;display: inline-block;" >
 							 	<span style="color:red;font-weight:bold;">*</span>아이디</label>	
-							<div class="col-sm-9 input-group-sm">
+							<div class="col-sm-9 input-group-sm" style="width: 79%;">
 								<input name="id" 
 									onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎㅏ-ㅣ가-힣]/g, &#39;&#39;);"
-								type="text" class="form-control" id="id" placeholder="13글자 영문자,숫자 조합" oninput="idCheck();"  style="display: inline-block;width: auto;">
+								type="text" class="form-control" id="id" placeholder="13글자 영문자,숫자 조합" oninput="idCheck();"  >
 								<span class="input-group-append-sm">	
 									<span class="check_font" id="id_check"></span>
 								</span>								
@@ -64,7 +64,7 @@
 							</div>								
 						</div>
 						<div class="form-group row">
-							<label for="pwd" class="col-sm-3" style="font-size:0.9em;">
+							<label for="pwd" class="col-sm-3" style="font-size:0.9em; text-align: center;">
 								<span style="color:red;font-weight:bold;">*</span>패스워드</label>
 							<div class="col-sm-9 input-group-sm">								
 								<input class="form-control" name="pwd" onblur="pwdCheck();" type="password" class="form-control" id="pwd"style="display: inline-block;width: auto; placeholder="20글자 영문자,숫자,특수문자 조합" />
@@ -76,16 +76,19 @@
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="name" class="col-sm-3" style="font-size:0.9em;">
+							<label for="name" class="col-sm-3" style="font-size:0.9em; text-align: center;">
 								<span style="color:red;font-weight:bold;">*</span>이름</label>
 							<div class="col-sm-9 input-group-sm">								
 								<input class="form-control" name="name" type="text" id="name"
-										placeholder="이름을 입력해주세요" />
+										placeholder="이름을 입력해주세요" style="display: inline-block;width: auto;" />
+								<span class="input-group-append-sm">
+									<span class="check_font"></span>
+								</span>
 							</div>
 						</div>	
 						<div class="form-group row">
 							<label for="authority" class="col-sm-3 control-label text-center" >권 한</label>
-							<div class="col-sm-9">
+							<div class="col-sm-9" style="max-width: fit-content;">
 								<select name="authority" class="form-control">
 									<option value="ROLE_USER">사용자</option>
 									<option value="ROLE_MANAGER">운영자</option>
@@ -94,17 +97,17 @@
 							</div>
 						</div>					
 						<div class="form-group row">
-							<label for="email" class="col-sm-3" style="font-size:0.9em;">이메일</label>
+							<label for="email" class="col-sm-3" style="font-size:0.9em; text-align: center;">이메일</label>
 							<div class="col-sm-9 input-group-sm">
 								<input name="email" type="email" class="form-control" id="email"
 										placeholder="example@naver.com">
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="phone" class="col-sm-3 control-label">전화번호</label>
-							<div class="col-sm-9">	
+							<label for="phone" class="col-sm-3 control-label"  style="text-align: center;">전화번호</label>
+							<div class="col-sm-9" style="max-width: fit-content;">	
 								<div class="input-group-sm">
-									<select style="width:100px;" name="phone" id="phone" class="form-control float-left">
+									<select style="width:70px;" name="phone" id="phone" class="form-control float-left" >
 										<option value="">-선택-</option>
 										<option value="010" selected>010</option>
 										<option value="011">011</option>
@@ -112,9 +115,9 @@
 										<option value="018">018</option>
 									</select>							
 									<label class="float-left" style="padding: 0; text-align: center;">&nbsp;-&nbsp;</label>										
-									<input style="width:100px;" name="phone" type="text" class="form-control float-left" onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎ|가-힣|a-z|A-Z|]/g, &#39;&#39;);"/>
+									<input style="width:70px; max-width: fit-content;" maxlength="4" name="phone" type="text" class="form-control float-left" onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎ|가-힣|a-z|A-Z|]/g, &#39;&#39;);"/>
 									<label class="float-left" style="padding: 0; text-align: center;">&nbsp;-</label>
-									<input style="width:100px;" name="phone" type="text" class="form-control float-left" onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎ|가-힣|a-z|A-Z|]/g, &#39;&#39;);"/>						
+									<input style="width:70px; max-width: fit-content;" maxlength="4" name="phone" type="text" class="form-control float-left" onkeyup="this.value=this.value.replace(/[\ㄱ-ㅎ|가-힣|a-z|A-Z|]/g, &#39;&#39;);"/>						
 								</div>
 							</div>
 						</div>
@@ -141,7 +144,11 @@
 <!-- /.content-wrapper -->
 <style>
 	.regibox{
-		width:500px; 
+		width:380px; 
+	}
+	#id{
+	display: inline-block;
+	width: 71%;
 	}
 </style>
 

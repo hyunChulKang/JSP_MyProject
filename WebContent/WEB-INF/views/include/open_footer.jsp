@@ -10,5 +10,6 @@
 <script src="<%=request.getContextPath()%>/resources/bootstrap/dist/js/adminlte.min.js"></script>
 <!-- common.js -->
 <script src="<%=request.getContextPath() %>/resources/js/common.js"></script>
+<link href="<%=request.getContextPath() %>/resources/css/registwindow.css" rel="stylesheet" type="text/css">
 </body>
 </html>

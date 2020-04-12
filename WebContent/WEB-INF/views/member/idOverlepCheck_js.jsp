@@ -24,7 +24,7 @@
 			})
 	}
 	function pwdCheck(text){
-		var	 checkText = /(?=.*\d{1,50})(?=.*[~`!@#$%\^&*()-+=]{1,50})(?=.*[a-zA-Z]{1,50}).{20,50}$/;
+		var	 checkText = /(?=.*\d{1,50})(?=.*[~`!@#$%\^&*()-+=]{1,50})(?=.*[a-zA-Z]{1,50}).{5,50}$/;
 		var user_pwd=$('#pwd').val();
 		if(checkText.test(user_pwd)){
 			$('#pwd_check').text("적합");

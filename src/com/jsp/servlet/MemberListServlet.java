@@ -44,7 +44,6 @@ public class MemberListServlet extends HttpServlet {
 			url="error/500_error";
 			request.setAttribute("exception", e);
 		}
-		response.setCharacterEncoding("UTF-8");
 		ViewResolver.view(request, response, url);
 		
 	}
