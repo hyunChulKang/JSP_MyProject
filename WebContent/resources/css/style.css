@@ -104,6 +104,12 @@ nav[class="clearfix"] a#pull{
 	div[textbox="seachtext"]{
 		width:233px;
 	}
+	.clears{
+		display: none;
+	}
+	.insertbtn{
+	 white-space: pre;
+	}
 }
 
 

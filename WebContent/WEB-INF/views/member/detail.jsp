@@ -116,7 +116,7 @@
 		
 	});
 	$('#stopBtn').on('click',function(e){
-		location.href="stop?id=${member.id}";
+		location.href="enabled?id=${member.id}";
 	});
 	$('#deleteBtn').on('click',function(e){
 	

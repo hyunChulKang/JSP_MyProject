@@ -6,7 +6,7 @@
 
 <div class="content_wrapper" >
 		<!-- Content Header (Page header) -->
-		  <section class="content-header">
+		  <section class="content-header col-sm-6">
 		  	<div class="container-fluid">
 		  		<div class="row md-2">
 		  			<div class="col-sm-6">
@@ -27,13 +27,14 @@
   				</div>
   			</div>
   		</section>
+  		
        <!-- Main content -->
     	<section class="content">
     	  <div class="card">    
     	  	<div class="card-header with-border">
     	  		<div class="col-sm-4 float-sm-left">
     	  		<c:if test="${loginUser.authority eq 'ROLE_ADMIN' }" >
-    	  			<button type="button" class="btn btn-primary" 
+    	  			<button type="button" class="btn btn-primary insertbtn" 
     	  			onclick="OpenWindow('regist ','회원등록',448,739);" >회원등록</button>
     	  		</c:if>
     	  		</div>
@@ -68,19 +69,19 @@
 	             		<tr>	
 	             			<th>아이디</th>
 	             			<th>이  름</th>
-	             			<th>패스워드</th>
-	             			<th>이메일</th>
-	             			<th>전화번호</th>
+	             			<th class="clears">패스워드</th>
+	             			<th class="clears">이메일</th>
+	             			<th class="clears">전화번호</th>
 	             		</tr>
 
 		            	<c:if test="${!empty memberlist }">
 		             		<c:forEach var="member" items="${memberlist }">
 		             			<tr>
-		             				<td><a href="javascript:OpenWindow('detail?id=${member.id}','회원상세보기','1000','600');">${member.id}</a></td>
+		             				<td><a href="javascript:OpenWindow('detail?id=${member.id}','회원상세보기','583','805');">${member.id}</a></td>
 		             				<td>${member.name}</td>
-		             				<td>${member.pwd}</td>
-		             				<td>${member.email}</td>
-		             				<td>${member.phone}</td>
+		             				<td class="clears">${member.pwd}</td>
+		             				<td class="clears">${member.email}</td>
+		             				<td class="clears">${member.phone}</td>
 		             			</tr>
 		             		</c:forEach>
 		             	</c:if>
