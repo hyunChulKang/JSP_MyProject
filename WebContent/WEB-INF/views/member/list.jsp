@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ include file="/WEB-INF/views/include/header.jsp" %>
 
 <div class="content_wrapper" >
 		<!-- Content Header (Page header) -->
@@ -10,7 +9,7 @@
 		  	<div class="container-fluid">
 		  		<div class="row md-2">
 		  			<div class="col-sm-6">
-		  				<h4>회원리스트</h4>
+		  				<h4 style="padding-left: 30px;">회원리스트</h4>
 		  			</div>
 		  			<div class="col-sm-6">
 		  				<ol class="breadcrumb float-sm-right">
@@ -38,8 +37,8 @@
     	  			onclick="OpenWindow('regist ','회원등록',448,739);" >회원등록</button>
     	  		</c:if>
     	  		</div>
-    	  		<div class="col-sm-8 float-sm-left">
-    	  		<div id="keyword" textbox="seachtext" class="card-tools" >
+    	  		<div class="col-sm-6 float-sm-left ">
+    	  		<div id="keyword" textbox="seachtext" class="card-tools searchtext" >
 				  <div class="input-group row">		
 				  <!-- search bar -->	  										
 					<select class="form-control col-md-4" name="searchType" id="searchType">
@@ -100,7 +99,3 @@
         </div> <!-- card  -->
       </section>	
     </div>
-				
-
-<%@ include file="/WEB-INF/views/include/footer.jsp" %>
-

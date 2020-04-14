@@ -2,7 +2,7 @@
 
 input[id="menuicons"] {display:none; top:100px;}
 input[id="menuicons"] + label {display:block;width:35px;height:30px;top:8.6%; left:1%;position:absolute;cursor:pointer;}
-input[id="menuicons"]:checked + label {overflow:auto; z-index:51;top:8%; left:9.06%;transition:transform 9s cubic-bezier(0, 0, 0.43, 1.1);}
+input[id="menuicons"]:checked + label {overflow:auto; z-index:51;top:8%; left:11%;transition:transform 9s cubic-bezier(0, 0, 0.43, 1.1);}
 input[id="menuicons"] + label span {display:block;position:absolute;width:100%;height:5px;border-radius:30px;background:#000000;transition: all .35s}
 input[id="menuicons"] + label span:nth-child(1) {top:0;}
 input[id="menuicons"] + label span:nth-child(2) {top:50%;transform:translateY(-50%);} /* 비슷하게 사용할 수 있는 style top:calc(50% - 2.5px); margin-top:-2.5px;*/
@@ -10,6 +10,6 @@ input[id="menuicons"] + label span:nth-child(3) {bottom:0;}
 input[id="menuicons"]:checked + label span:nth-child(1) {top:50%;transform:translateY(-50%) rotate(45deg);background:#000000;}
 input[id="menuicons"]:checked + label span:nth-child(2) {opacity:0;}
 input[id="menuicons"]:checked + label span:nth-child(3) {bottom:50%;transform:translateY(50%) rotate(-45deg);background:#000000;}
-div[class="sidebar"] {cursor: all-scroll;background:#EEEEEE;position:absolute;top:61px;left:-250px;z-index:50;background-color: hsla(-157, 152%, 98%, 0);transition: all .35s;width: 11%;}
+div[class="sidebar"] {cursor: all-scroll;background:#EEEEEE;position:absolute;top:70px;left:-250px;z-index:50;background-color: hsla(-157, 152%, 98%, 0);transition: all .35s;width:9.9%;min-height: 100%;}
 input[id="menuicons"]:checked + label + div {left:0px;transition: all .35s}
 .accordion {position:absolute;top:17%;left:49%;transform:translateX(-50%);width:100%;text-align: center;}

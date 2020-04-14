@@ -108,7 +108,10 @@ nav[class="clearfix"] a#pull{
 		display: none;
 	}
 	.insertbtn{
-	 white-space: pre;
+	 margin-bottom: 18px;
+	}
+	.searchtext{
+	
 	}
 }
 
