@@ -122,7 +122,7 @@
 	
 		var pwd =prompt("암호를 입력하세요");
 		$.ajax({
-			url:"checkPassword?pwd="+pwd,
+			url:"pwdCheck?pwd="+pwd,
 			type:"get",
 			success:function(data){
 				if(data=="SUCCESS"){
