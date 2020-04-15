@@ -36,7 +36,7 @@
 			return;
 		}
 		
-		if($('input[name="checkPWD"]').val() != $('input[name="checkPWD"]').vale()){
+		if($('input[name="checkPWD"]').val() != $('input[name="checkPWD"]').val()){
 			alert("부적합한 패스워드입니다.!");
 			$('#pwd_check').text("부적합");
 			$('#pwd_check').css("color", "red");

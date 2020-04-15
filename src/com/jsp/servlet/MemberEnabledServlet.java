@@ -14,28 +14,29 @@ import com.jsp.dto.MemberVO;
 import com.jsp.service.MemberServiceImpl;
 import com.jsp.utils.ViewResolver;
 
-@WebServlet("/member/remove")
-public class MeberRemoveServlet extends HttpServlet {
+@WebServlet("/member/enabled")
+public class MemberEnabledServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String id= request.getParameter("id");
-		String url="member/remove_success";
-		HttpSession session = request.getSession();
-		
-		MemberVO member = (MemberVO) session.getAttribute("loginUser");
-		if(member.getId().equals(id)) {
-			url="member/remove_denied";
-		}else {
-			try {
-				MemberServiceImpl.getInstance().remove(id);
-			} catch (SQLException e) {
-				e.printStackTrace();
-				url="error/500_error";
-				request.setAttribute("exception", e);
-			}
-			
+	String url = "";
+	String id = request.getParameter("id");
+	
+	HttpSession session = request.getSession();
+	MemberVO member=(MemberVO) session.getAttribute("loginUser");
+	if(member.getId().equals(id)) {
+		url="member/enabled_denied";
+	}else {
+		try {
+			MemberServiceImpl.getInstance().disabled(id);
+			url="member/enabled_success";
+			request.setAttribute("member", member);
+		} catch (SQLException e) {
+			url="error/500_error";
+			request.setAttribute("exception", e);
 		}
-		ViewResolver.view(request, response, url);
 	}
+	ViewResolver.view(request, response, url);
+	
+}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
