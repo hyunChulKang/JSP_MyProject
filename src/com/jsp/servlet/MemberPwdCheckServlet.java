@@ -12,23 +12,27 @@ import javax.servlet.http.HttpSession;
 
 import com.jsp.dto.MemberVO;
 import com.jsp.service.MemberServiceImpl;
+import com.jsp.utils.ViewResolver;
 
 @WebServlet("/member/pwdCheck")
 public class MemberPwdCheckServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
-		String mempwd ="";
-		
+		String pwd= request.getParameter("pwd");
+		String url="member/pwdCheck_fail";
 		try {
 			MemberVO mem = null;
 			mem=MemberServiceImpl.getInstance().getMember(id);
-			if(mem!=null) {
-				mempwd=mem.getPwd();
+			if(mem!=null && mem.getPwd().equals(pwd)) {
+				url="member/pwdCheck_success";
+				request.setAttribute("mem", mem);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+			url="error/500_error";
+			request.setAttribute("exception", e);
 		}
-		response.getWriter().write(mempwd);
+		ViewResolver.view(request, response, url);
 		
 	}
 

@@ -131,7 +131,9 @@
 	$('#deleteBtn').on('click',function(e){
 	
 		var pwd =prompt("암호를 입력하세요");
-		$.ajax({
+		
+		location.href="pwdCheck?id=${member.id}&pwd="+pwd;
+<%--		$.ajax({
 			url:"pwdCheck?id=${member.id}",
 			type:"get",
 			success:function(data){
@@ -141,7 +143,7 @@
 					alert("패스워드가 일치하지 않습니다.")
 				}
 			}
-		});
+		});--%>
 	});
 </script>
 
