@@ -6,7 +6,8 @@
 	clear:both;
 }
 .clearfix{
-	*zoom:1;
+	float: right;
+    padding: 0px 7% 0px 0px;
 }
 
 /* Basic Styles */
@@ -66,7 +67,8 @@ nav[class="clearfix"] a#pull{
 	nav[class="clearfix"] ul {
 		display: none;
 		height: auto;
-		    padding-left: 0;
+		padding-left: 0;
+		width:100%;
 	}
 	nav[class="clearfix"] a {
 	  	text-align: left;
@@ -113,6 +115,8 @@ nav[class="clearfix"] a#pull{
 	.searchtext{
 	
 	}
+	.clearfix {
+    padding: 0;
 }
 
 

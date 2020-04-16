@@ -35,7 +35,8 @@
       <div class="container-fluid">
         <div class="row mb">
             <ol class="breadcrumb float-sm-right" style="line-height: 20px;">
-              <li class="breadcrumb-item"><a id="userIdOnText">${loginUser.id} 님 환영합니다. </a><a id="logoutBtn" onmouseup="location.href='<%=request.getContextPath() %>/commons/logout';" > 로그아웃</a></li>
+              <li class="breadcrumb-item "><a id="userIdOnText">${loginUser.id} 님 환영합니다. </a></li>
+              <li class="breadcrumb-item clears"><a id="logoutBtn" onmouseup="location.href='<%=request.getContextPath() %>/commons/logout';" > 로그아웃</a></li>
               <li class="breadcrumb-item clears"><a href="#" class="header-item">Home</a></li>
               <li class="breadcrumb-item clears"><a href="#" class="header-item">회원관리</a></li>
               <li class="breadcrumb-item clears"><a href="#" class="header-item">Layout</a></li>
@@ -43,34 +44,16 @@
         </div>
       </div><!-- /.container-fluid -->
     </section>
-     <%--  <div class= "content-headerdown">
-	      <div class="navbar1 col-sm-3">
-	      	<a href="#" >MyProject</a>
-	      </div>
-      <div class="navbar2 col-sm-9">
-      	<ol>
-      		<li><a class="navbar_btn" style="color: #f5f8fa;">일정관리</a></li>
-      	
-      		<li><a class="navbar_btn" style="color: #f5f8fa;">전자결재</a></li>
-      	
-      		<li><a class="navbar_btn" style="color: #f5f8fa;">프로젝트</a></li>
-      	
-      		<li><a class="navbar_btn" style="color: #f5f8fa;">통합게시판</a></li>
-      	
-      		<li><a class="navbar_btn" style="color: #f5f8fa;">자원요청</a></li>
-      	</ol>
-      </div>
-      </div>--%>
       <nav class="clearfix">
-   	      <ul class="clearfix">
-   	         <li><a href="#">Home</a></li>
-   	         <li><a href="#">How-to</a></li>
-   	         <li><a href="#">Icons</a></li>
-   	         <li><a href="#">Design</a></li>
-   	         <li><a href="#">Web 2.0</a></li>
-   	         <li><a href="#">Tools</a></li>
-   	      </ul>
    	      <a id="pull" href="#">Menu</a>
+   	      <ul class="clearfix">
+   	         <li><a href="#">일정관리</a></li>
+   	         <li><a href="#">전자결재</a></li>
+   	         <li><a href="#">프로젝트</a></li>
+   	         <li><a href="#">통합게시판</a></li>
+   	         <li><a href="#">자원요청</a></li>
+   	         <li><a href="#">문의</a></li>
+   	      </ul>
    	  </nav>
 	</header>
 <div class="center" style="">
@@ -385,9 +368,10 @@
 	}
 	#logoutBtn{
 	font-size: 10px;
+	color: #7eb7d6;
 	}
 	#logoutBtn:hover {
-	color: white;
+	color: red;
 	}
 	#userIdOnText{
 	color: #f3a6a6;
