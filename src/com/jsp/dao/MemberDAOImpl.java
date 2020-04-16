@@ -5,13 +5,11 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.jsp.dto.MemberVO;
-import com.jsp.mybatis.OracleMyBatisSqlSessionFactoryBuilder;
 
 public class MemberDAOImpl implements MemberDAO{
-	SqlSessionFactory sqlSessionFactory;
+	/*	SqlSessionFactory sqlSessionFactory;
 	private static MemberDAOImpl memberDao;
 	private MemberDAOImpl() {
 		sqlSessionFactory= OracleMyBatisSqlSessionFactoryBuilder.getSqlSessionFactory();
@@ -24,8 +22,11 @@ public class MemberDAOImpl implements MemberDAO{
 		return memberDao;
 	}
 	
-	
-	private SqlSessionFactory sessionFactory =OracleMyBatisSqlSessionFactoryBuilder.getSqlSessionFactory(); 
+*/	
+	private SqlSessionFactory sessionFactory;/* =OracleMyBatisSqlSessionFactoryBuilder.getSqlSessionFactory();*/
+	public void setSqlSessionFactory(SqlSessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
+	}
 
 	@Override
 	public List<MemberVO> selectMemberList() throws SQLException {

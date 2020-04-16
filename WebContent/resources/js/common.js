@@ -48,6 +48,6 @@
 	}
 	
 	function SubmitModify(form){
-		var forms= $('form[role="form');
+		var forms= $('form[role="form"]');
 		forms.submit();
 	}

@@ -403,5 +403,6 @@
    	      	if(w>600 && menu.is(':hidden'))
    	      		{menu.removeAttr('style');}
    	      });
+   	      
    	  });
    	   </script>

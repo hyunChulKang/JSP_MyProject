@@ -2,6 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true" %>
 <script>
-	alert("${param.id}님! \n활성화로 변경되었습니다.");
+	alert("${param.id}님! \n비활성화로 변경되었습니다.");
 	location.href="detail?id=${param.id}";
 </script>

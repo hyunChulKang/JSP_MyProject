@@ -2,10 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<%@ include file="/WEB-INF/views/include/open_header.jsp" %>
-
-
+<%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
+<body>
   <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
 	  <section class="content-header">
@@ -82,12 +80,12 @@
 			          		</div>
 			          	<c:if test="${member.enabled eq '1'}">
 			          		<div class="col-sm-3 text-center">
-			          			<button type="button" id="enabled" class="btn btn-info" >활성화</button>
+			          			<button type="button" id="disabled" class="btn btn-info" >활성화</button>
 			          		</div>
 			          	</c:if>
 			          	<c:if test="${member.enabled eq '0'}">
 			          		<div class="col-sm-3 text-center">
-			          			<button type="button" id="disabled" class="btn btn-info" >비활성화</button>
+			          			<button type="button" id="enabled" class="btn btn-info" >비활성화</button>
 			          		</div>
 			          	</c:if>
 			          		<div class="col-sm-3 text-center">
@@ -107,8 +105,6 @@
 	<input type="hidden" name="id" value="${member.id }" />
 </form>
 
-
-<%@ include file="/WEB-INF/views/include/open_footer.jsp" %>
 
 <script>
 	var imageURL ="picture/get?picture=${member.picture}";
@@ -146,10 +142,4 @@
 		});--%>
 	});
 </script>
-
-
-
-
-
-  
-  
+</body>

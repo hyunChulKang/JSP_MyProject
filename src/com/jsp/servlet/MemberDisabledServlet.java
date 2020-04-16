@@ -25,7 +25,7 @@ public class MemberDisabledServlet extends HttpServlet {
 			url="member/disabled_denied";
 		}else {
 			try {
-				MemberServiceImpl.getInstance().enabled(id);
+				MemberServiceImpl.getInstance().disabled(id);
 				url="member/disabled_success";
 				request.setAttribute("member", member);
 			} catch (SQLException e) {
