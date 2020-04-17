@@ -34,7 +34,7 @@
     	<section class="content">
     	  <div class="card">    
     	  	<div class="card-header with-border">
-    	  		<div class="col-sm-4 float-sm-left">
+    	  		<div class="col-sm-6 float-sm-left">
     	  		<c:if test="${loginUser.authority eq 'ROLE_ADMIN' }" >
     	  			<button type="button" class="btn btn-primary insertbtn" 
     	  			onclick="OpenWindow('regist ','회원등록',448,739);" >회원등록</button>

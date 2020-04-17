@@ -75,17 +75,17 @@
 			          		<div class="col-sm-3 text-center">
 			          			<button type="button" id="modifyBtn" class="btn btn-warning ">수 정</button>
 			          		</div>
-			          		<div class="col-sm-3text-center">
+			          		<div class="col-sm-3 text-center">
 				          		<button type="button" id="deleteBtn" class="btn btn-danger" >삭 제</button>
 			          		</div>
 			          	<c:if test="${member.enabled eq '1'}">
 			          		<div class="col-sm-3 text-center">
-			          			<button type="button" id="disabled" class="btn btn-info" >활성화</button>
+			          			<button type="button" id="disabled" class="btn btn-info" >활동</button>
 			          		</div>
 			          	</c:if>
 			          	<c:if test="${member.enabled eq '0'}">
 			          		<div class="col-sm-3 text-center">
-			          			<button type="button" id="enabled" class="btn btn-info" >비활성화</button>
+			          			<button type="button" id="enabled" class="btn btn-info" >정지</button>
 			          		</div>
 			          	</c:if>
 			          		<div class="col-sm-3 text-center">

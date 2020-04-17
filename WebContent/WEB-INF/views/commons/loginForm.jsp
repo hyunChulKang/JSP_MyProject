@@ -42,7 +42,7 @@
 
       <form name="frm" action="<%=request.getContextPath() %>/commons/login" method="post">
         <div class="input-group mb-3">
-          <input type="text" autofocus name="id" class="form-control" placeholder="Id" value="mimi" }>
+          <input type="text" autofocus name="id" class="form-control" placeholder="Id" value="mimi">
           <div class="input-group-append">
             <div class="input-group-text">
               <i class="fa fa-key"></i>
