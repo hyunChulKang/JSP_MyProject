@@ -29,7 +29,7 @@
 		if(checkText.test(user_pwd)){
 			$('#pwd_check').text("적합");
 			$('#pwd_check').css("color", "green");
-			$('input[name=checkPWD]').val(user_pwd);
+			$('input[name="checkagin"]').val(user_pwd);
 		}else{
 			$('#pwd_check').text("부적합");
 			$('#pwd_check').css("color", "red");

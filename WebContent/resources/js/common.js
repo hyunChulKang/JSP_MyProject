@@ -30,17 +30,17 @@
 			return;
 		}
 		
-		if(!$('input[name="checkPWD"]').val()){
+		if(!$('input[name="pwd"]').val()){
 			alert("패스워드를 입력하세요!");
-			$('input[name="checkPWD"').focus();
+			$('input[name="pwd"').focus();
 			return;
 		}
 		
-		if($('input[name="checkPWD"]').val() != $('input[name="checkPWD"]').val()){
+		if($('input[name="pwd"]').val() != $('input[name="checkagin"]').val()){
 			alert("부적합한 패스워드입니다.!");
 			$('#pwd_check').text("부적합");
 			$('#pwd_check').css("color", "red");
-			$('input[name="checkPWD"').focus();
+			$('input[name="pwd"').focus();
 			return;
 		} 
 		var form =$('form[role="form"]');

@@ -16,8 +16,7 @@
   <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/bootstrap/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-	
-  
+  <link href="<%=request.getContextPath() %>/resources/css/detail.css" rel="stylesheet" type="text/css">
   <!-- jQuery -->
   <script src="<%=request.getContextPath()%>/resources/bootstrap/plugins/jquery/jquery.min.js"></script>
 <decorator:head />

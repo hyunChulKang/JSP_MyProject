@@ -2,7 +2,10 @@
 	pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true"%>
 
-<%@ include file="/WEB-INF/views/include/open_header.jsp" %>
+<head>
+	<title>회원등록</title>
+</head>
+<body>
 	<!-- Content Wrapper. Contains page content -->
  <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
@@ -67,12 +70,11 @@
 							<label for="pwd" class="col-sm-3 labelui" >
 								<span style="color:red;font-weight:bold;">*</span>패스워드</label>
 							<div class="col-sm-9 input-group-sm widthsize">								
-								<input class="form-control inputtextwidth" name="pwd" onblur="pwdCheck();" type="password" class="form-control" id="pwd" placeholder="20글자 영문자,숫자,특수문자 조합" />
-								<input name="checkPWD" type="hidden" /> 
+								<input class="form-control inputtextwidth" name="pwd" oninput="pwdCheck();" type="password" class="form-control" id="pwd" placeholder="20글자 영문자,숫자,특수문자 조합" />
 								<span class="input-group-append-sm">
-									
 									<span class="check_font" id="pwd_check"></span>
 								</span> 
+								<input name="checkagin" type="hidden" />
 							</div>
 						</div>
 						<div class="form-group row">
@@ -157,9 +159,6 @@
 	<input id="oldFile" type="hidden" name="oldPicture" value="" />
 	<input type="hidden" name="checkUpload" value="0" />	
 </form>
-
-
-<%@ include file="/WEB-INF/views/include/open_footer.jsp" %>
-
 <%@ include file="picture_js.jsp" %>
 <%@ include file="idOverlepCheck_js.jsp" %>
+</body>

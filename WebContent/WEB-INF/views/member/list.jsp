@@ -8,7 +8,7 @@
 <body>
 <div class="content_wrapper" >
 		<!-- Content Header (Page header) -->
-		  <section class="content-header col-sm-6">
+		  <section class="content-header col-sm-12">
 		  	<div class="container-fluid">
 		  		<div class="row md-2">
 		  			<div class="col-sm-6">
@@ -76,8 +76,8 @@
 	             			<th class="clears">전화번호</th>
 	             		</tr>
 
-		            	<c:if test="${!empty memberlist }">
-		             		<c:forEach var="member" items="${memberlist }">
+		            	<c:if test="${!empty memberList }">
+		             		<c:forEach var="member" items="${memberList }">
 		             			<tr>
 		             				<td><a href="javascript:OpenWindow('detail?id=${member.id}','회원상세보기','583','805');">${member.id}</a></td>
 		             				<td>${member.name}</td>
@@ -87,7 +87,7 @@
 		             			</tr>
 		             		</c:forEach>
 		             	</c:if>
-		             	<c:if test="${empty memberlist }">
+		             	<c:if test="${empty memberList }">
 		             			<tr>
 		             				<td colspan="5">해당 항목이 없습니다.</td>
 		             			</tr>
@@ -98,6 +98,7 @@
            	</div>            
        	  </div>   
 		  <div class="card-footer">
+		  	<%@ include file="/WEB-INF/views/pagination/pagination.jsp" %>
 		  </div> <!-- card-footer -->
         </div> <!-- card  -->
       </section>	

@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="decorator" uri="http://www.opensymphony.com/sitemesh/decorator" %>
 <body>
-  <div class="content-wrapper">
+  <nav class="content-wrapper clearfix2">
 	<!-- Content Header (Page header) -->
 	  <section class="content-header">
 	  	<div class="container-fluid ">
@@ -39,7 +39,7 @@
 					</div>
 					<br />
 	                <div class="form-group row" >
-	                  <label for="inputEmail3" class="col-sm-3 control-label text-right">아이디</label>
+	                  <label for="inputEmail3" class="col-sm-3 control-label text-right ">아이디</label>
 	                  <div class="col-sm-9">
 	                    <input name="id" type="text" readonly class="form-control" id="inputEmail3" value="${member.id }">
 	                  </div>
@@ -71,24 +71,24 @@
 	                </div>               
 	              </div>
 	              <div class="card-footer">
-	        			<div class="row">
-			          		<div class="col-sm-3 text-center">
-			          			<button type="button" id="modifyBtn" class="btn btn-warning ">수 정</button>
+	        			<div class="row rowBtn">
+			          		<div class="col-sm-3 text-center detailbtn">
+			          			<button type="button" id="modifyBtn" class="btn btn-warning">수 정</button>
 			          		</div>
-			          		<div class="col-sm-3 text-center">
+			          		<div class="col-sm-3 text-center detailbtn">
 				          		<button type="button" id="deleteBtn" class="btn btn-danger" >삭 제</button>
 			          		</div>
 			          	<c:if test="${member.enabled eq '1'}">
-			          		<div class="col-sm-3 text-center">
+			          		<div class="col-sm-3 text-center detailbtn">
 			          			<button type="button" id="disabled" class="btn btn-info" >활동</button>
 			          		</div>
 			          	</c:if>
 			          	<c:if test="${member.enabled eq '0'}">
-			          		<div class="col-sm-3 text-center">
+			          		<div class="col-sm-3 text-center detailbtn">
 			          			<button type="button" id="enabled" class="btn btn-info" >정지</button>
 			          		</div>
 			          	</c:if>
-			          		<div class="col-sm-3 text-center">
+			          		<div class="col-sm-3 text-center detailbtn">
 			            		<button type="button" id="listBtn" onclick="CloseWindow();" class="btn btn-primary pull-right">닫 기</button>
 			            	</div>
 		          	    </div>  	
@@ -97,7 +97,7 @@
       	  </div>
     </section>
     <!-- /.content -->
-  </div>
+  </nav>
   <!-- /.content-wrapper -->
 
 <!-- post parameter -->
