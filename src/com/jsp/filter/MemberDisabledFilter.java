@@ -15,8 +15,8 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.jsp.dispatcher.ViewResolver;
 import com.jsp.dto.MemberVO;
-import com.jsp.utils.ViewResolver;
 public class MemberDisabledFilter implements Filter {
 
 	List<String> checkURLs = new ArrayList<String>();

@@ -40,7 +40,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">홈페이지를 이용하시려면 <br/>로그인이 필요합니다.</p>
 
-      <form name="frm" action="<%=request.getContextPath() %>/commons/login" method="post">
+      <form name="frm" action="<%=request.getContextPath() %>/commons/login.do" method="post">
         <div class="input-group mb-3">
           <input type="text" autofocus name="id" class="form-control" placeholder="Id" value="mimi">
           <div class="input-group-append">

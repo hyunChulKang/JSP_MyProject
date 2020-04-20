@@ -37,7 +37,7 @@
     	  		<div class="col-sm-6 float-sm-left">
     	  		<c:if test="${loginUser.authority eq 'ROLE_ADMIN' }" >
     	  			<button type="button" class="btn btn-primary insertbtn" 
-    	  			onclick="OpenWindow('regist ','회원등록',448,739);" >회원등록</button>
+    	  			onclick="OpenWindow('registForm.do ','회원등록',448,739);" >회원등록</button>
     	  		</c:if>
     	  		</div>
     	  		<div class="col-sm-6 float-sm-left ">
@@ -79,7 +79,7 @@
 		            	<c:if test="${!empty memberList }">
 		             		<c:forEach var="member" items="${memberList }">
 		             			<tr>
-		             				<td><a href="javascript:OpenWindow('detail?id=${member.id}','회원상세보기','583','805');">${member.id}</a></td>
+		             				<td><a href="javascript:OpenWindow('detailForm.do?id=${member.id}','회원상세보기','583','805');">${member.id}</a></td>
 		             				<td>${member.name}</td>
 		             				<td class="clears">${member.pwd}</td>
 		             				<td class="clears">${member.email}</td>

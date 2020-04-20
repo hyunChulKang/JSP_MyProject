@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jsp.utils.ViewResolver;
+import com.jsp.dispatcher.ViewResolver;
 
 /**
  * Servlet implementation class LogoutServlet

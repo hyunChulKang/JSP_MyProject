@@ -107,7 +107,7 @@
 
 
 <script>
-	var imageURL ="picture/get?picture=${member.picture}";
+	var imageURL ="picture/get.do?picture=${member.picture}";
 	$('div#pictureView').css({'background-image' :'url('+imageURL+')',
 							  'background-position' : 'center',
 							  'background-size' : 'cover',
@@ -115,7 +115,7 @@
 	});
 	
 	$('#modifyBtn').on('click',function(e){
-		location.href="modify?id=${member.id}";
+		location.href="modifyForm	.do?id=${member.id}";
 		
 	});
 	$('#enabled').on('click',function(e){

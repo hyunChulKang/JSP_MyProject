@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.jsp.dto.MemberVO;
 import com.jsp.service.MemberServiceImpl;
-@WebServlet("/member/idCheck_js")
+//@WebServlet("/member/idCheck_js")
 public class idOverlepServlet extends HttpServlet {
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

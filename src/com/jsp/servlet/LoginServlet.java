@@ -11,24 +11,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.jsp.dispatcher.ViewResolver;
 import com.jsp.dto.MemberVO;
 import com.jsp.exception.InvalidPasswordException;
 import com.jsp.exception.NotFoundIDExcepiton;
 import com.jsp.service.MemberServiceImpl;
-import com.jsp.utils.ViewResolver;
 
-@WebServlet("/commons/login")
+//@WebServlet("/commons/login")
 public class LoginServlet extends HttpServlet {
-/*	최초 실행시 한번 실행됨
-	public void init(ServletConfig config) throws ServletException {
-		System.out.println("init() execute!!!");
-	}
-	톰캣이 종료될때 한번 실행됨
-	public void destroy() {
-		System.out.println("destroy() execute!!!");
-	}  */
-	
-	/*do로 시작하는 매서는 request의 요청에따라서 실행한다.*/
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String url="/WEB-INF/views/commons/loginForm.jsp";

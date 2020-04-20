@@ -5,7 +5,7 @@
 	function idCheck(){
 			var user_id =$('#id').val();
 			$.ajax({
-				url:'<%=request.getContextPath() %>/member/idCheck_js?id='+user_id,
+				url:'<%=request.getContextPath() %>/member/idCheck_js.do?id='+user_id,
 				type:'get',
 				success:function(data){
 					if(data == ""){
