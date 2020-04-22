@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.jsp.action.Action;
 
-@WebServlet("/FrontServlet")
 public class FrontServlet extends HttpServlet {
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
