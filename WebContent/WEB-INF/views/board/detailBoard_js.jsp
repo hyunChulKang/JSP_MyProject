@@ -29,4 +29,5 @@
 		window.close();
 		window.opener.location.reload(true);
 	});
+	
 </script>

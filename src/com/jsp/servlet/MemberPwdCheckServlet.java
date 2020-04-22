@@ -14,24 +14,23 @@ import com.jsp.dispatcher.ViewResolver;
 import com.jsp.dto.MemberVO;
 import com.jsp.service.MemberServiceImpl;
 
-@WebServlet("/member/pwdCheck")
 public class MemberPwdCheckServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
 		String pwd= request.getParameter("pwd");
 		String url="member/pwdCheck_fail";
-		try {
-			MemberVO mem = null;
-			mem=MemberServiceImpl.getInstance().getMember(id);
-			if(mem!=null && mem.getPwd().equals(pwd)) {
-				url="member/pwdCheck_success";
-				request.setAttribute("mem", mem);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-			url="error/500_error";
-			request.setAttribute("exception", e);
-		}
+//		try {
+//			MemberVO mem = null;
+//			mem=MemberServiceImpl.getInstance().getMember(id);
+//			if(mem!=null && mem.getPwd().equals(pwd)) {
+//				url="member/pwdCheck_success";
+//				request.setAttribute("mem", mem);
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//			url="error/500_error";
+//			request.setAttribute("exception", e);
+//		}
 		ViewResolver.view(request, response, url);
 		
 	}

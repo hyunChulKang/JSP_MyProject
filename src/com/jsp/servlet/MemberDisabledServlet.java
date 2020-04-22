@@ -14,26 +14,25 @@ import com.jsp.dispatcher.ViewResolver;
 import com.jsp.dto.MemberVO;
 import com.jsp.service.MemberServiceImpl;
 
-@WebServlet("/member/disabled")
 public class MemberDisabledServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url="";
 		String id = request.getParameter("id");
 		HttpSession session = request.getSession();
 		MemberVO member= (MemberVO) session.getAttribute("loginUser");
-		if(member.getId().equals(id)) {
-			url="member/disabled_denied";
-		}else {
-			try {
-				MemberServiceImpl.getInstance().disabled(id);
-				url="member/disabled_success";
-				request.setAttribute("member", member);
-			} catch (SQLException e) {
-				e.printStackTrace();
-				url="error/500_error";
-				request.setAttribute("exception", e);
-			}
-		}
+//		if(member.getId().equals(id)) {
+//			url="member/disabled_denied";
+//		}else {
+//			try {
+//				MemberServiceImpl.getInstance().disabled(id);
+//				url="member/disabled_success";
+//				request.setAttribute("member", member);
+//			} catch (SQLException e) {
+//				e.printStackTrace();
+//				url="error/500_error";
+//				request.setAttribute("exception", e);
+//			}
+//		}
 		ViewResolver.view(request, response, url);
 	}
 

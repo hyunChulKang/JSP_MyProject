@@ -58,6 +58,7 @@
 		member(id, pwd, email, phone, picture, name)
 		values(#{id},#{pwd},#{email},#{phone},#{picture},#{name})
 	</update>
+	
 	<update id="updateMember" parameterType="member">
 		update member
 		set

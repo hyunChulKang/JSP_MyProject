@@ -21,4 +21,9 @@
   <script src="<%=request.getContextPath()%>/resources/bootstrap/plugins/jquery/jquery.min.js"></script>
 <decorator:head />
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini" onbeforeunload="windowCloseX()">
+	<script>
+	function windowCloseX(){
+		window.opener.location.reload(true);
+	}
+	</script>

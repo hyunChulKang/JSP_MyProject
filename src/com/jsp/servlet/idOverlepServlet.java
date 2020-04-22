@@ -17,16 +17,16 @@ public class idOverlepServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
 		String memID = ""; 
-		try {
-			MemberVO mem =null;			
-			mem=MemberServiceImpl.getInstance().getMember(id);
-			if(mem!=null) {
-				memID=mem.getId();
-			}
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			MemberVO mem =null;			
+//			mem=MemberServiceImpl.getInstance().getMember(id);
+//			if(mem!=null) {
+//				memID=mem.getId();
+//			}
+//			
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
 		response.getWriter().print(memID);
 	}
 

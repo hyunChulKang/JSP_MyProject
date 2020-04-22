@@ -14,7 +14,10 @@ import com.jsp.service.MemberService;
 import com.jsp.service.MemberServiceImpl;
 
 public class MemberListFormAction implements Action {
-
+	private MemberService memberService;
+	public void setMemberService(MemberService memberService) {
+		this.memberService = memberService;
+	}
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -35,10 +38,9 @@ public class MemberListFormAction implements Action {
 		cri.setSearchType(searchType);
 		cri.setKeyword(keyword);
 		
-		MemberService service = MemberServiceImpl.getInstance();
 		
 		try {
-			Map<String, Object> dataMap=service.getMemberList(cri);
+			Map<String, Object> dataMap=memberService.getMemberList(cri);
 				
 			request.setAttribute("memberList", dataMap.get("memberList"));
 			request.setAttribute("pageMaker", dataMap.get("pageMaker"));

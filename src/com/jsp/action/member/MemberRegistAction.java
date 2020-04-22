@@ -15,11 +15,10 @@ import com.jsp.service.MemberServiceImpl;
 
 public class MemberRegistAction implements Action {
 
-	private MemberService memberService = MemberServiceImpl.getInstance();
-	public void setMemberService (MemberService memberService) {
-		this.memberService =memberService;
+	private MemberService memberService;
+	public void setMemberService(MemberService memberService) {
+		this.memberService = memberService;
 	}
-	
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

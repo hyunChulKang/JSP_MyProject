@@ -128,7 +128,7 @@
 	
 		var pwd =prompt("암호를 입력하세요");
 		
-		location.href="pwdCheck?id=${member.id}&pwd="+pwd;
+		location.href="pwdCheck.do?id=${member.id}&pwd="+pwd;
 <%--		$.ajax({
 			url:"pwdCheck?id=${member.id}",
 			type:"get",

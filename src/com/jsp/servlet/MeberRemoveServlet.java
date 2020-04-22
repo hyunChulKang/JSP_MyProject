@@ -14,7 +14,6 @@ import com.jsp.dispatcher.ViewResolver;
 import com.jsp.dto.MemberVO;
 import com.jsp.service.MemberServiceImpl;
 
-@WebServlet("/member/remove")
 public class MeberRemoveServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id= request.getParameter("id");
@@ -22,18 +21,18 @@ public class MeberRemoveServlet extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		MemberVO member = (MemberVO) session.getAttribute("loginUser");
-		if(member.getId().equals(id)) {
-			url="member/remove_denied";
-		}else {
-			try {
-				MemberServiceImpl.getInstance().remove(id);
-			} catch (SQLException e) {
-				e.printStackTrace();
-				url="error/500_error";
-				request.setAttribute("exception", e);
-			}
-			
-		}
+//		if(member.getId().equals(id)) {
+//			url="member/remove_denied";
+//		}else {
+//			try {
+//				MemberServiceImpl.getInstance().remove(id);
+//			} catch (SQLException e) {
+//				e.printStackTrace();
+//				url="error/500_error";
+//				request.setAttribute("exception", e);
+//			}
+//			
+//		}
 		ViewResolver.view(request, response, url);
 	}
 

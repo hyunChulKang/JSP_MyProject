@@ -17,9 +17,9 @@ import com.jsp.service.MemberServiceImpl;
 
 public class LoginAction implements Action{
 
-	private MemberService memberService = MemberServiceImpl.getInstance();
+	private MemberService memberService;
 	public void setMemberService(MemberService memberService) {
-		this.memberService=memberService;
+		this.memberService = memberService;
 	}
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
@@ -29,7 +29,7 @@ public class LoginAction implements Action{
 		String pwd= request.getParameter("pwd");
 		HttpSession session =request.getSession();
 		try {
-			MemberServiceImpl.getInstance().login(id, pwd);
+			memberService.login(id, pwd);
 			
 			MemberVO loginUser= memberService.getMember(id);
 			

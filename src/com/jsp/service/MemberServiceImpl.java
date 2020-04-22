@@ -15,10 +15,6 @@ import com.jsp.request.PageMaker;
 import com.jsp.request.SearchCriteria;
 
 public class MemberServiceImpl implements MemberService{
-	private static MemberServiceImpl instance = new MemberServiceImpl();
-	public static MemberServiceImpl getInstance() {
-		return instance;
-	}
 	
 	private MemberDAO memberDAO;/* = MemberDAOImpl.getMemberDaoImpl();*/
 	public void setMemberDAO(MemberDAO memberDAO) {

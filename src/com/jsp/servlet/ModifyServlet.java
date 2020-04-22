@@ -14,20 +14,19 @@ import com.jsp.dto.MemberVO;
 import com.jsp.request.MemberRegistRequest;
 import com.jsp.service.MemberServiceImpl;
 
-//@WebServlet("/member/modify")
 public class ModifyServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String url = "member/modify";
 		String  id = request.getParameter("id");
 		
-		try {
-			MemberVO member =MemberServiceImpl.getInstance().getMember(id);
-			request.setAttribute("member", member);
-		} catch (SQLException e) {
-			e.printStackTrace();
-			url="error/500_error";
-			request.setAttribute("exception", e);
-		}
+//		try {
+//			MemberVO member =MemberServiceImpl.getInstance().getMember(id);
+//			request.setAttribute("member", member);
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//			url="error/500_error";
+//			request.setAttribute("exception", e);
+//		}
 		ViewResolver.view(request, response, url);
 	}
 
@@ -45,12 +44,12 @@ public class ModifyServlet extends HttpServlet {
 		MemberRegistRequest memberReq = new MemberRegistRequest(id, pwd, authority, email, picture, phone, name);
 		MemberVO member =memberReq.toMemberVO();
 		
-		try {
-			MemberServiceImpl.getInstance().modify(member);
-		} catch (SQLException e) {
-			e.printStackTrace();
-			url="member/midify_fail";
-		}
+//		try {
+//			MemberServiceImpl.getInstance().modify(member);
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//			url="member/midify_fail";
+//		}
 		ViewResolver.view(request, response, url);
 		
 	}

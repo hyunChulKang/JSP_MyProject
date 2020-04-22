@@ -20,7 +20,6 @@ import com.jsp.utils.GetUploadPath;
 import com.jsp.utils.MakeFileName;
 import com.jsp.utils.MakeLogForException;
 
-//@WebServlet("/member/picture")
 public class UploadPictureServlet extends HttpServlet {
 	/*업로드 하기위해선 doGet을 닫아 놔야한다.*/
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

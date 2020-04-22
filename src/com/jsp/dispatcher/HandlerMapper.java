@@ -40,7 +40,6 @@ public class HandlerMapper {
 						paramType = paramType.substring(paramType.lastIndexOf(".")+1);
 						
 						paramType =(paramType.charAt(0)+ "").toLowerCase()+paramType.substring(1);
-						
 						try {
 							method.invoke(commandAction, ApplicationContext.getApplicationContext().get(paramType));
 						} catch (Exception e) {
