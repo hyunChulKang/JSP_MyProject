@@ -12,7 +12,7 @@
 		  	<div class="container-fluid">
 		  		<div class="row md-2">
 		  			<div class="col-sm-6">
-		  				<h4 style="padding-left: 30px;">회원리스트</h4>
+		  				<h4 style="padding-left: 7.5px;">회원리스트</h4>
 		  			</div>
 		  			<div class="col-sm-6">
 		  				<ol class="breadcrumb float-sm-right">
@@ -31,7 +31,7 @@
   		</section>
   		
        <!-- Main content -->
-    	<section class="content">
+    	<section class="content" style="padding: 0 .5rem;">
     	  <div class="card">    
     	  	<div class="card-header with-border">
     	  		<div class="col-sm-6 float-sm-left">

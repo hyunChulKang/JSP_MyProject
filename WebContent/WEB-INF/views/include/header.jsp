@@ -36,7 +36,8 @@
         <div class="row mb">
             <ol class="breadcrumb float-sm-right" style="line-height: 20px;">
               <li class="breadcrumb-item "><a id="userIdOnText">${loginUser.id} 님 환영합니다. </a></li>
-              <li class="breadcrumb-item "><a id="logoutBtn" onmouseup="location.href='<%=request.getContextPath() %>/commons/logout';" > 로그아웃</a></li>
+              <li class="breadcrumb-item ">
+              <a id="logoutBtn" onmouseup="location.href='<%=request.getContextPath() %>/commons/logout.do';" > 로그아웃</a></li>
               <li class="breadcrumb-item clears">
               <a href="<%=request.getContextPath() %>/member/list.do" class="header-item">회원관리</a></li>
               <li class="breadcrumb-item clears">
@@ -385,6 +386,7 @@
     margin-right: 15%;
     float: left;
     width: 76%;
+    background-color: #f4f6f9;
 	}
 	@media(min-width: 768){
 	transition: margin-left .3s ease-in-out;

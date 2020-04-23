@@ -19,7 +19,7 @@
 <body>
   <c:set var="pageMaker" value="${dataMap.pageMaker }" />	
   	
-   <div class="content-wrapper" >
+   <div class="content-wrapper" style="margin-left: 10%;margin-right: 15%;float: left;width: 76%;" >
     
 	<jsp:include page="content_header.jsp">
 		<jsp:param value="자유게시판" name="subject"/>

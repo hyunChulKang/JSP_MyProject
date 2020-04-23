@@ -4,11 +4,11 @@
 
 
 <!-- Content Header (Page header) -->
-    <section class="content-header">
+    <section class="content-header" style="height:80px;">
     	<div class="container-fluid">
     		<div class="row mb-2">
     			<div class="col-sm-6">
-	      			<h1>${param.subject }</h1>
+	      			<h4>${param.subject }</h4>
 	      		</div>	      		
 	    	
 	       		
